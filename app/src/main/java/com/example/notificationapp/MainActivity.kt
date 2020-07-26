@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
                     enableLights(true)
                 }
                 val manager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+                manager.cancelAll()
                 manager.createNotificationChannel(channel)
             }
         }
