@@ -35,9 +35,14 @@ class MainActivity : AppCompatActivity() {
         val notification = NotificationCompat.Builder(this, CHANNEL_Id)
             .setContentTitle("AwesomeNotification")
             .setContentText("This is notification text . bla bla bla")
+                //and setContentText have to be like that
+                //.setContentText("your terms - Are you sure to do that ?")
             .setSmallIcon(R.drawable.limitless)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(pendingIntent)
+            //if you want to do something like an action you can easily do it like that\
+            //.addAction(R.drawable.bckground,"yes",pendingIntent1)
+            //.addAction(R.drawable.bckground,"yes",pendingIntent2)
             .build()
 
         val notificationManager =NotificationManagerCompat.from(this)
